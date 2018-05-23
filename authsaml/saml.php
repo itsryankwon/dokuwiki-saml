@@ -65,7 +65,7 @@ class saml_handler {
     {
         if ($this->ssp == null) {
             include_once($this->simplesaml_path.'/lib/_autoload.php');
-            $this->ssp = new SimpleSAML_Auth_Simple($this->simplesaml_authsource);
+            $this->ssp = new SimpleSAML\Auth\Simple($this->simplesaml_authsource);
         }
         return $this->ssp;
     }
